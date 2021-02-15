@@ -41,7 +41,7 @@ export default function Home() {
               color="tertiary.main"
               textAlign={{
                 xs: 'center',
-                md: 'left'
+                md: 'left',
               }}
             >
               Compartilhe momentos e conecte-se com amigos
@@ -53,11 +53,12 @@ export default function Home() {
               color="tertiary.light"
               textAlign={{
                 xs: 'center',
-                md: 'left'
+                md: 'left',
               }}
             >
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s
             </Text>
 
             <Button
@@ -71,9 +72,7 @@ export default function Home() {
               Cadastrar
             </Button>
           </Grid.Col>
-          <Grid.Col
-            value={{ xs: 12, md: 6 }}
-          >
+          <Grid.Col value={{ xs: 12, md: 6 }}>
             <img
               style={{ display: 'block', margin: 'auto' }}
               src="/images/phones.png"
