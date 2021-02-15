@@ -23,7 +23,7 @@ export const MenuWrapper = styled.nav`
             max-width: 768px;
         `,
         lg: css`
-            max-width: 1160px; 
+            max-width: 1160px;
         `,
         xl: css`
             max-width: 1222px;

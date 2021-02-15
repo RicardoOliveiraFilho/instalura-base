@@ -22,8 +22,8 @@ export default function Home() {
       <Menu />
       <Grid.Container
         marginTop={{
-          xs: '5px',
-          md: '25px',
+          xs: '32px',
+          md: '75px',
         }}
       >
         <Grid.Row>
@@ -56,7 +56,7 @@ export default function Home() {
                 md: 'left'
               }}
             >
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
             </Text>
 
