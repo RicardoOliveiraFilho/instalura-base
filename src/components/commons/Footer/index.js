@@ -18,6 +18,18 @@ export default function Footer(props) {
           <span>Bootcamp Alura JAM Stack</span>
         </a>
       </p>
+
+      <small>Créditos:</small>
+      <small>
+        Ícone do <b>Sol</b> feito por{' '}
+        <a href="https://www.flaticon.com/authors/smalllikeart">smalllikeart</a>{' '}
+        obtido de <a href="https://www.flaticon.com">www.flaticon.com</a>
+      </small>
+      <small>
+        Ícone da <b>Lua</b> feito por{' '}
+        <a href="https://www.freepik.com/home">Freepik</a> obtido de{' '}
+        <a href="https://www.flaticon.com">www.flaticon.com</a>
+      </small>
     </FooterWrapper>
   );
 }

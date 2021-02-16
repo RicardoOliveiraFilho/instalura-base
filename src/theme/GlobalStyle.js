@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
         width: 100%;
 
         background-color: ${({ theme }) => theme.colors.background.main.color};
+        transition: all 0.25s linear;
     }
 
     #__next {

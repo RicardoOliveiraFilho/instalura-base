@@ -54,6 +54,8 @@ export const lightTheme = {
   transition: '200ms ease-in-out',
   fontFamily: `'Rubik', sans-serif`,
   imageBubbles: 'url(/images/bubblesLight.svg)',
+  toggleBorder: '#FFF',
+  gradient: 'linear-gradient(#39598A, #79D7ED)',
 };
 
 export const darkTheme = {
@@ -110,6 +112,8 @@ export const darkTheme = {
   transition: '200ms ease-in-out',
   fontFamily: `'Rubik', sans-serif`,
   imageBubbles: 'url(/images/bubblesDark.svg)',
+  toggleBorder: '#6B8096',
+  gradient: 'linear-gradient(#091236, #1E215D)',
 };
 
 export default {
