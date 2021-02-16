@@ -15,7 +15,6 @@ export default function Home() {
       flexWrap="wrap"
       flexDirection="column"
       justifyContent="space-between"
-      backgroundImage="url(/images/bubbles.svg)"
       backgroundRepeat="no-repeat"
       backgroundPosition="bottom right"
     >
@@ -38,7 +37,7 @@ export default function Home() {
             <Text
               variant="title"
               tag="h1"
-              color="tertiary.main"
+              color="quaternary.title"
               textAlign={{
                 xs: 'center',
                 md: 'left',
@@ -50,7 +49,7 @@ export default function Home() {
             <Text
               variant="paragraph1"
               tag="p"
-              color="tertiary.light"
+              color="quaternary.subTitle"
               textAlign={{
                 xs: 'center',
                 md: 'left',
@@ -80,7 +79,7 @@ export default function Home() {
           </Grid.Col>
         </Grid.Row>
       </Grid.Container>
-      <Footer />
+      <Footer color="quaternary.subTitle" />
     </Box>
   );
 }

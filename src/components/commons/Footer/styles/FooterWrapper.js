@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import get from 'lodash/get';
 
 export const FooterWrapper = styled.footer`
   padding: 14px;
@@ -8,6 +9,7 @@ export const FooterWrapper = styled.footer`
   border-radius: 4px;
   padding-right: 28px;
   padding-left: 28px;
+  color: ${({ theme, color }) => get(theme, `colors.${color}.color`)};
   img {
     width: 58px;
     margin-right: 23px;
