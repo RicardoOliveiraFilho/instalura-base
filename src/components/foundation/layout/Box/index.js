@@ -11,4 +11,6 @@ export const Box = styled.div`
   background-image: ${({ theme }) => theme.imageBubbles};
   ${propToStyle('backgroundRepeat')}
   ${propToStyle('backgroundPosition')}
+  ${propToStyle('boxShadow')}
+  ${propToStyle('padding')}
 `;
