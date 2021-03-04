@@ -10,7 +10,7 @@ import Modal from '../src/components/commons/Modal';
 import FormCadastro from '../src/components/patterns/FormCadastro';
 
 export default function Home() {
-  const [isModalOpen, setModalState] = useState(true);
+  const [isModalOpen, setModalState] = useState(false);
 
   return (
     <Box
