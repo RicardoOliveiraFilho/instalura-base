@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function SunIcon() {
+export default function SunIcon() {
   return (
     <svg
       height="511.99986pt"

@@ -1,9 +1,9 @@
-import theme from '../index';
 import { css } from 'styled-components';
+import theme from '../index';
 
 const { breakpoints } = theme;
 
-export function breakpointsMedia(cssByBreakpoints) {
+export default function breakpointsMedia(cssByBreakpoints) {
   const breakpointsNames = Object.keys(cssByBreakpoints);
 
   return breakpointsNames.map(breakpointsName => {

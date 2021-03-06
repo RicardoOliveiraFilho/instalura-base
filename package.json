@@ -6,7 +6,8 @@
     "build": "next build",
     "export": "next build && next export",
     "start": "next start",
-    "eslint:init": "eslint --init"
+    "eslint:init": "eslint --init",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
     "@crello/react-lottie": "^0.0.11",

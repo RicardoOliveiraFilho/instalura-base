@@ -27,6 +27,12 @@
       }
     ],
     "no-use-before-define": "off",
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "func-names": "off",
+    "consistent-return": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
+    "no-unused-vars": "off",
+    "react/no-unescaped-entities": "off"
   }
 }

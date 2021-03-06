@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ToggleWrapper = styled.button`
+const ToggleWrapper = styled.button`
   background: ${({ theme }) => theme.gradient};
   border: 2px solid ${({ theme }) => theme.toggleBorder};
   border-radius: 30px;
@@ -34,3 +34,5 @@ export const ToggleWrapper = styled.button`
     }
   }
 `;
+
+export default ToggleWrapper;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import get from 'lodash/get';
 
-export const FooterWrapper = styled.footer`
+const FooterWrapper = styled.footer`
   padding: 14px;
   display: flex;
   align-items: center;
@@ -25,3 +25,5 @@ export const FooterWrapper = styled.footer`
     }
   }
 `;
+
+export default FooterWrapper;

@@ -1,4 +1,4 @@
-export const typographyVariants = {
+const typographyVariants = {
   title: {
     fontSize: '32px',
     fontWeight: '700',
@@ -35,3 +35,5 @@ export const typographyVariants = {
     lineHeight: 1, // 100%
   },
 };
+
+export default typographyVariants;

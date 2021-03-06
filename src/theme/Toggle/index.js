@@ -1,9 +1,9 @@
 import React from 'react';
 import { func, string } from 'prop-types';
 
-import { MoonIcon } from '../Icons/MoonIcon';
-import { SunIcon } from '../Icons/SunIcon';
-import { ToggleWrapper } from './styles/ToggleWrapper';
+import MoonIcon from '../Icons/MoonIcon';
+import SunIcon from '../Icons/SunIcon';
+import ToggleWrapper from './styles/ToggleWrapper';
 
 export default function Toggle({ theme, toggleTheme }) {
   const isLight = theme === 'light';

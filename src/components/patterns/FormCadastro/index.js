@@ -4,9 +4,9 @@ import { Lottie } from '@crello/react-lottie';
 import successAnimation from './animations/success.json';
 import errorAnimation from './animations/error.json';
 
-import { Box } from '../../foundation/layout/Box';
-import { Grid } from '../../foundation/layout/Grid';
-import { Button } from '../../commons/Button';
+import Box from '../../foundation/layout/Box';
+import Grid from '../../foundation/layout/Grid';
+import Button from '../../commons/Button';
 import TextField from '../../forms/TextField';
 import Text from '../../foundation/Text';
 
@@ -26,8 +26,8 @@ function FormContent() {
     nome: 'Ricardo Oliveira',
   });
 
-  const isFormInvalid = userInfo.usuario.length === 0
-    || userInfo.nome.length === 0;
+  const isFormInvalid =
+    userInfo.usuario.length === 0 || userInfo.nome.length === 0;
 
   function handleChange(event) {
     const fieldName = event.target.getAttribute('name');
@@ -38,42 +38,40 @@ function FormContent() {
   }
 
   return (
-    <form onSubmit={(event) => {
-      event.preventDefault();
+    <form
+      onSubmit={event => {
+        event.preventDefault();
 
-      setIsFormSubmited(true);
+        setIsFormSubmited(true);
 
-      const userDTO = {
-        username: userInfo.usuario,
-        name: userInfo.nome,
-      };
+        const userDTO = {
+          username: userInfo.usuario,
+          name: userInfo.nome,
+        };
 
-      fetch('https://instalura-api.vercel.app/api/users', {
-        method: 'POST',
-        headers: {
-          'Content-type': 'application/json',
-        },
-        body: JSON.stringify(userDTO),
-      })
-      .then((respostaDoServidor) => {
-        if(respostaDoServidor.ok) {
-          return respostaDoServidor.json();
-        }
+        fetch('https://instalura-api.vercel.app/api/users', {
+          method: 'POST',
+          headers: {
+            'Content-type': 'application/json',
+          },
+          body: JSON.stringify(userDTO),
+        })
+          .then(respostaDoServidor => {
+            if (respostaDoServidor.ok) {
+              return respostaDoServidor.json();
+            }
 
-        throw new Error('Não foi possível submeter o form');
-      })
-      .then((respostaConvertidaEmObjeto) => {
-        setSubmissionStatus(formStates.DONE);
-      })
-      .catch((error) => {
-        setSubmissionStatus(formStates.ERROR);
-      });
-    }}>
-      <Text
-        variant="title"
-        tag="h1"
-        color="tertiary.main"
-      >
+            throw new Error('Não foi possível submeter o form');
+          })
+          .then(respostaConvertidaEmObjeto => {
+            setSubmissionStatus(formStates.DONE);
+          })
+          .catch(error => {
+            setSubmissionStatus(formStates.ERROR);
+          });
+      }}
+    >
+      <Text variant="title" tag="h1" color="tertiary.main">
         Pronto para saber da vida dos outros?
       </Text>
 
@@ -83,8 +81,8 @@ function FormContent() {
         color="tertiary.light"
         marginBottom="32px"
       >
-        Você está a um passo de saber tudo o que está
-        rolando no bairro, complete seu cadastro agora!
+        Você está a um passo de saber tudo o que está rolando no bairro,
+        complete seu cadastro agora!
       </Text>
 
       <div>
@@ -115,29 +113,31 @@ function FormContent() {
       </Button>
 
       {isFormSubmited && submissionStatus === formStates.DONE && (
-        <Box
-          display="flex"
-          justifyContent="center"
-        >
+        <Box display="flex" justifyContent="center">
           <Lottie
             width="150px"
             height="150px"
             className="lottie-container basic"
-            config={{ animationData: successAnimation, loop: false, autoplay: true }}
+            config={{
+              animationData: successAnimation,
+              loop: false,
+              autoplay: true,
+            }}
           />
         </Box>
       )}
 
       {isFormSubmited && submissionStatus === formStates.ERROR && (
-        <Box
-          display="flex"
-          justifyContent="center"
-        >
+        <Box display="flex" justifyContent="center">
           <Lottie
             width="150px"
             height="150px"
             className="lottie-container basic"
-            config={{ animationData: errorAnimation, loop: false, autoplay: true }}
+            config={{
+              animationData: errorAnimation,
+              loop: false,
+              autoplay: true,
+            }}
           />
         </Box>
       )}
@@ -147,12 +147,7 @@ function FormContent() {
 
 export default function FormCadastro({ propsDoModal }) {
   return (
-    <Grid.Row
-      marginLeft={0}
-      marginRight={0}
-      flex={1}
-      justifyContent="flex-end"
-    >
+    <Grid.Row marginLeft={0} marginRight={0} flex={1} justifyContent="flex-end">
       <Grid.Col
         display="flex"
         paddingRight={{ md: '0' }}

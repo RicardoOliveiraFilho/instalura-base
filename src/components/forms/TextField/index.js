@@ -12,7 +12,7 @@ const Input = styled(Text)`
   border: 1px solid ${({ theme }) => theme.colors.tertiary.light.color};
   padding: 12px 16px;
   outline: 0;
-  border-radius: ${( theme ) => theme.borderRadius};
+  border-radius: ${theme => theme.borderRadius};
 `;
 
 Input.defaultProps = {
@@ -20,12 +20,7 @@ Input.defaultProps = {
   variant: 'paragraph1',
 };
 
-export default function TextField({
-  placeholder,
-  name,
-  onChange,
-  value,
-}) {
+export default function TextField({ placeholder, name, onChange, value }) {
   return (
     <InputWrapper>
       <Input

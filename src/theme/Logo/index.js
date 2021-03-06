@@ -5,7 +5,7 @@ const Svg = styled.svg`
   fill: ${({ theme }) => theme.colors.logo.fill};
 `;
 
-export function Logo() {
+export default function Logo() {
   return (
     <Svg
       width="96"

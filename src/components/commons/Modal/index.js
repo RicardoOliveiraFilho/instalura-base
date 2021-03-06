@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {css, createGlobalStyle } from 'styled-components';
+import styled, { css, createGlobalStyle } from 'styled-components';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
@@ -16,11 +16,11 @@ const ModalWrapper = styled.div`
   margin: auto;
   overflow: scroll;
 
-  transition: .3s;
+  transition: 0.3s;
   z-index: 100;
 
   ${({ isOpen }) => {
-    if(isOpen) {
+    if (isOpen) {
       return css`
         opacity: 1;
         pointer-events: all;
@@ -44,10 +44,12 @@ export default function Modal({ isOpen, onClose, children }) {
   return (
     <ModalWrapper
       isOpen={isOpen}
-      onClick={(event) => {
-        const isSafeArea = event.target.closest('[data-model-safe-area="true"]');
+      onClick={event => {
+        const isSafeArea = event.target.closest(
+          '[data-model-safe-area="true"]',
+        );
 
-        if(!isSafeArea) {
+        if (!isSafeArea) {
           onClose();
         }
       }}
@@ -84,4 +86,4 @@ Modal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   children: PropTypes.func.isRequired,
   onClose: PropTypes.func.isRequired,
-}
+};

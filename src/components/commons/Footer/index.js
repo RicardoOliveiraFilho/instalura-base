@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FooterWrapper } from './styles/FooterWrapper';
+import FooterWrapper from './styles/FooterWrapper';
 
 export default function Footer(props) {
   return (
@@ -13,7 +13,7 @@ export default function Footer(props) {
       </a>
 
       <p>
-        Orgulhosamente criado durante o{' '}
+        Orgulhosamente criado durante o
         <a href="https://www.alura.com.br/">
           <span>Bootcamp Alura JAM Stack</span>
         </a>
@@ -21,13 +21,19 @@ export default function Footer(props) {
 
       <small>Créditos:</small>
       <small>
-        Ícone do <b>Sol</b> feito por{' '}
-        <a href="https://www.flaticon.com/authors/smalllikeart">smalllikeart</a>{' '}
-        obtido de <a href="https://www.flaticon.com">www.flaticon.com</a>
+        Ícone do
+        <b>Sol</b>
+        feito por
+        <a href="https://www.flaticon.com/authors/smalllikeart">smalllikeart</a>
+        obtido de
+        <a href="https://www.flaticon.com">www.flaticon.com</a>
       </small>
       <small>
-        Ícone da <b>Lua</b> feito por{' '}
-        <a href="https://www.freepik.com/home">Freepik</a> obtido de{' '}
+        Ícone da
+        <b>Lua</b>
+        feito por
+        <a href="https://www.freepik.com/home">Freepik</a>
+        obtido de
         <a href="https://www.flaticon.com">www.flaticon.com</a>
       </small>
     </FooterWrapper>
