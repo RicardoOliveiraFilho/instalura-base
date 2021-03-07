@@ -8,7 +8,8 @@
     "start": "next start",
     "eslint:init": "eslint --init",
     "lint": "eslint --ignore-path .gitignore .",
-    "custom-script": "node ./script-test.js"
+    "custom-script": "node ./script-test.js",
+    "commit": "cz"
   },
   "dependencies": {
     "@crello/react-lottie": "^0.0.11",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.8.0",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.20.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^7.2.0",
@@ -32,8 +34,19 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "4.3.8",
     "prettier": "^2.2.1",
     "shelljs": "^0.8.4"
   },
-  "license": "MIT"
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn lint"
+    }
+  },
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
