@@ -1,10 +1,24 @@
 import React from 'react';
 
+import WebsitePageHOC from '../../src/components/wrappers/WebsitePage/hoc';
 import FAQScreen from '../../src/components/screens/FAQScreen';
 
-export default function FAQPage({ faqCategories }) {
+function FAQPage({ faqCategories }) {
   return <FAQScreen faqCategories={faqCategories} />;
 }
+
+export default WebsitePageHOC(FAQPage, {
+  pageWrapperProps: {
+    seoProps: {
+      headTitle: 'Perguntas Frequentes',
+    },
+    pageBoxProps: {
+      backgroundImage: 'url(/images/bubblesLight.svg)',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'bottom right',
+    },
+  },
+});
 
 FAQPage.propTypes = FAQScreen.propTypes;
 
