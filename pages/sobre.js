@@ -1,11 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
+import WebsitePageHOC from '../src/components/wrappers/WebsitePage/hoc';
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.secondary.main.color};
-`;
-
-export default function PageSobre() {
-  return <Title>Página Sobre</Title>;
+function AboutPage() {
+  return (
+    <div>
+      Página Sobre
+    </div>
+  );
 }
+
+export default WebsitePageHOC(AboutPage, {
+  pageWrapperProps: {
+    seoProps: {
+      headTitle: 'Sobre',
+    },
+    menuProps: {
+      display: true,
+    },
+  },
+});
