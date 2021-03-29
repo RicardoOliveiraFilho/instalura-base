@@ -10,6 +10,11 @@ export default WebsitePageHOC(LoginPage, {
     seoProps: {
       headTitle: 'Login',
     },
+    pageBoxProps: {
+      backgroundImage: 'url(/images/bubblesLight.svg)',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'bottom right',
+    },
     menuProps: {
       display: false,
     },

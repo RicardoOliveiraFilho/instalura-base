@@ -10,6 +10,11 @@ export default WebsitePageHOC(AboutPage, {
     seoProps: {
       headTitle: 'Sobre',
     },
+    pageBoxProps: {
+      backgroundImage: 'url(/images/bubblesLight.svg)',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'bottom right',
+    },
     menuProps: {
       display: true,
     },
