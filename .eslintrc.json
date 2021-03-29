@@ -33,6 +33,7 @@
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
     "no-unused-vars": "off",
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "react/destructuring-assignment": "off"
   }
 }
