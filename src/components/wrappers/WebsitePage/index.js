@@ -13,7 +13,10 @@ export const WebsitePageContext = createContext({
 });
 
 export default function WebsitePageWrapper({
-  children, seoProps, pageBoxProps, menuProps
+  children,
+  seoProps,
+  pageBoxProps,
+  menuProps,
 }) {
   const [isModalOpen, setModalState] = useState(false);
 
@@ -27,25 +30,18 @@ export default function WebsitePageWrapper({
     >
       <SEO {...seoProps} />
 
-      <Box
-        display="flex"
-        flex="1"
-        flexDirection="column"
-        {...pageBoxProps}
-      >
+      <Box display="flex" flex="1" flexDirection="column" {...pageBoxProps}>
         <Modal
           isOpen={isModalOpen}
           onClose={() => {
             setModalState(false);
           }}
         >
-          {(propsDoModal) => (
-            <FormCadastro propsDoModal={propsDoModal} />
-          )}
+          {propsDoModal => <FormCadastro propsDoModal={propsDoModal} />}
         </Modal>
-        {menuProps.display && (<Menu
-          onCadastrarClick={() => setModalState(true)}
-        />)}
+        {menuProps.display && (
+          <Menu onCadastrarClick={() => setModalState(true)} />
+        )}
         {children}
         <Footer color="quaternary.subTitle" />
       </Box>
@@ -53,7 +49,7 @@ export default function WebsitePageWrapper({
   );
 }
 
-WebsitePageWrapper.defaultProps={
+WebsitePageWrapper.defaultProps = {
   seoProps: {},
   pageBoxProps: {},
   menuProps: {

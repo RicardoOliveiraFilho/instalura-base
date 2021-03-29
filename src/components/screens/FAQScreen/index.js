@@ -6,7 +6,6 @@ import Box from '../../foundation/layout/Box';
 import Grid from '../../foundation/layout/Grid';
 
 export default function FAQScreen({ faqCategories }) {
-
   return (
     <Grid.Container style={{ flex: 1 }}>
       <Grid.Row
