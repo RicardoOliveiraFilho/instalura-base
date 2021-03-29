@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import Head from 'next/head';
 
-import SEO from '../src/components/commons/SEO';
 import { lightTheme, darkTheme } from '../src/theme/index';
 import GlobalStyle from '../src/theme/GlobalStyle';
 
@@ -21,7 +20,6 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
-      <SEO headTitle="Home" />
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />

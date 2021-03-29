@@ -14,11 +14,13 @@ export default function Footer(props) {
 
       <p>
         Orgulhosamente criado durante o
+        {' '}
         <a href="https://www.alura.com.br/">
           <span>Bootcamp Alura JAM Stack</span>
         </a>
       </p>
 
+      {/*
       <small>Créditos:</small>
       <small>
         Ícone do
@@ -36,6 +38,7 @@ export default function Footer(props) {
         obtido de
         <a href="https://www.flaticon.com">www.flaticon.com</a>
       </small>
+      */}
     </FooterWrapper>
   );
 }
