@@ -5,7 +5,7 @@ import Head from 'next/head';
 import { lightTheme, darkTheme } from '../src/theme/index';
 import GlobalStyle from '../src/theme/GlobalStyle';
 
-import Toggle from '../src/theme/Toggle';
+// import Toggle from '../src/theme/Toggle';
 
 export default function App({ Component, pageProps }) {
   const [theme, setTheme] = useState('light');
@@ -32,7 +32,9 @@ export default function App({ Component, pageProps }) {
 
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
         <GlobalStyle />
+        {/*
         <Toggle theme={theme} toggleTheme={toggleTheme} />
+        */}
         <Component {...pageProps} />
       </ThemeProvider>
     </>

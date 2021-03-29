@@ -7,12 +7,24 @@ const Box = styled.div`
   ${propToStyle('flexDirection')}
   ${propToStyle('justifyContent')}
   ${propToStyle('flexWrap')}
-  ${propToStyle('backgroundColor')}
-  background-image: ${({ theme }) => theme.imageBubbles};
+  ${propToStyle('backgroundColor')} {
+    /*background-image: ${({ theme }) => theme.imageBubbles};*/
+  }
+  ${propToStyle('backgroundImage')}
   ${propToStyle('backgroundRepeat')}
   ${propToStyle('backgroundPosition')}
   ${propToStyle('boxShadow')}
   ${propToStyle('padding')}
+
+  ${propToStyle('width')}
+  ${propToStyle('listStyle')}
+  ${propToStyle('margin')}
+  ${propToStyle('marginLeft')}
+  ${propToStyle('marginTop')}
+  ${propToStyle('marginBottom')}
+  ${propToStyle('marginRight')}
+  ${({ theme, borderRadiusTheme }) =>
+    borderRadiusTheme && `border-radius: ${theme.borderRadius}`};
 `;
 
 export default Box;

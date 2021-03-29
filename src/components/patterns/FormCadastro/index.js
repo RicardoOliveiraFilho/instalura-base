@@ -22,8 +22,8 @@ function FormContent() {
   const [submissionStatus, setSubmissionStatus] = useState(formStates.DEFAULT);
 
   const [userInfo, setUserInfo] = useState({
-    usuario: 'ricardo.oliveira',
-    nome: 'Ricardo Oliveira',
+    usuario: '',
+    nome: '',
   });
 
   const isFormInvalid =
@@ -166,6 +166,9 @@ export default function FormCadastro({ propsDoModal }) {
           }}
           backgroundColor="white"
           {...propsDoModal}
+          backgroundImage="url(/images/bubblesLight.svg)"
+          backgroundRepeat="no-repeat"
+          backgroundPosition="bottom right"
         >
           <FormContent />
         </Box>
