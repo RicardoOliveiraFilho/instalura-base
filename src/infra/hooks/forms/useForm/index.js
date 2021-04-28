@@ -13,7 +13,7 @@ export default function useForm({ initialValues, onSubmit }) {
       const fieldName = event.target.getAttribute('name');
       const { value } = event.target;
 
-      setValues((currentValues) => ({
+      setValues(currentValues => ({
         ...currentValues,
         [fieldName]: value,
       }));

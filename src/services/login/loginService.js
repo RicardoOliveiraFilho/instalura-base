@@ -1,4 +1,4 @@
-import { setCookie } from 'nookies';
+import { setCookie, destroyCookie } from 'nookies';
 
 async function HttpClient(url, { headers, body, ...options }) {
   return fetch(url, {
@@ -8,7 +8,7 @@ async function HttpClient(url, { headers, body, ...options }) {
     },
     body: JSON.stringify(body),
     ...options,
-  }).then((respostaDoServer) => {
+  }).then(respostaDoServer => {
     if (respostaDoServer.ok) {
       return respostaDoServer.json();
     }
@@ -19,14 +19,16 @@ async function HttpClient(url, { headers, body, ...options }) {
 
 const loginService = {
   async login({ username, password }) {
-    return HttpClient('https://instalura-api-git-master-omariosouto.vercel.app/api/login', {
-      method: 'POST',
-      body: {
-        username,
-        password,
+    return HttpClient(
+      'https://instalura-api-git-master-omariosouto.vercel.app/api/login',
+      {
+        method: 'POST',
+        body: {
+          username,
+          password,
+        },
       },
-    })
-    .then((respostaConvertida) => {
+    ).then(respostaConvertida => {
       const { token } = respostaConvertida.data;
       const DAY_IN_SECONDS = 86400;
 

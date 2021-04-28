@@ -1,8 +1,9 @@
 // <reference types="cypress" />
 describe('/pages/app/login/', () => {
   it('preencha os campos e vá para a página /app/profile', () => {
-    cy.intercept('https://instalura-api-git-master-omariosouto.vercel.app/api/login')
-      .as('userLogin');
+    cy.intercept(
+      'https://instalura-api-git-master-omariosouto.vercel.app/api/login',
+    ).as('userLogin');
 
     cy.visit('/app/login/');
 
@@ -14,13 +15,12 @@ describe('/pages/app/login/', () => {
 
     cy.url().should('include', '/app/profile');
 
-    cy.wait('@userLogin')
-      .then((intercept) => {
-        const { token } = intercept.response.body.data;
+    cy.wait('@userLogin').then(intercept => {
+      const { token } = intercept.response.body.data;
 
-        cy.getCookie('APP_TOKEN')
-          .should('exist')
-          .should('have.property', 'value', token);
-      });
+      cy.getCookie('APP_TOKEN')
+        .should('exist')
+        .should('have.property', 'value', token);
+    });
   });
 });

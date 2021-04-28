@@ -11,20 +11,21 @@ export default function LoginForm() {
   const router = useRouter();
 
   const initialValues = {
-    usuario: '', //omariosouto
-    senha: '', //senhasegura
+    usuario: '', // omariosouto
+    senha: '', // senhasegura
   };
 
   const form = useForm({
     initialValues,
-    onSubmit: (values) => {
-      loginService.login({
-        username: values.usuario,
-        password: values.senha,
-      })
-      .then(() => {
-        router.push('/app/profile');
-      });
+    onSubmit: values => {
+      loginService
+        .login({
+          username: values.usuario,
+          password: values.senha,
+        })
+        .then(() => {
+          router.push('/app/profile');
+        });
     },
   });
 
