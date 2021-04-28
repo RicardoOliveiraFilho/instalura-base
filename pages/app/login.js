@@ -12,15 +12,8 @@ import Logo from '../../src/theme/Logo';
 function LoginForm() {
   return (
     <form id="formLogin" action="/app/profile">
-      <TextField
-        placeholder="Usuário"
-        name="usuario"
-      />
-      <TextField
-        placeholder="Senha"
-        name="senha"
-        type="password"
-      />
+      <TextField placeholder="Usuário" name="usuario" />
+      <TextField placeholder="Senha" name="senha" type="password" />
 
       <Button
         type="submit"
@@ -41,16 +34,8 @@ function LoginScreen() {
   const websitePageContext = useContext(WebsitePageContext);
 
   return (
-    <Grid.Container
-      display="flex"
-      flex="1"
-      alignItems="center"
-    >
-      <Grid.Row
-        flex="1"
-        alignItems="center"
-        justifyContent="center"
-      >
+    <Grid.Container display="flex" flex="1" alignItems="center">
+      <Grid.Row flex="1" alignItems="center" justifyContent="center">
         <Grid.Col
           display="flex"
           flexDirection="column"
@@ -66,10 +51,7 @@ function LoginScreen() {
             marginTop="37px"
             marginBottom="37px"
           >
-            <Link
-              href="/"
-              color="secondary.main"
-            >
+            <Link href="/" color="secondary.main">
               <Logo size="large" />
             </Link>
           </Box>
@@ -86,7 +68,7 @@ function LoginScreen() {
             <Link
               href="/"
               color="secondary.main"
-              onClick={(event) => {
+              onClick={event => {
                 event.preventDefault();
                 websitePageContext.toggleModalCadastro();
               }}
@@ -97,10 +79,7 @@ function LoginScreen() {
         </Grid.Col>
 
         <Grid.Col value={{ xs: 12, md: 6 }}>
-          <Box
-            display="flex"
-            justifyContent="center"
-          >
+          <Box display="flex" justifyContent="center">
             <img
               align="center"
               src="/images/phones.png"
