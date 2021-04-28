@@ -1,9 +1,11 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "cypress/globals": true
   },
   "extends": [
+    "plugin:cypress/recommended",
     "plugin:react/recommended",
     "airbnb",
     "plugin:prettier/recommended",
@@ -34,6 +36,10 @@
     "react/prop-types": "off",
     "no-unused-vars": "off",
     "react/no-unescaped-entities": "off",
-    "react/destructuring-assignment": "off"
+    "react/destructuring-assignment": "off",
+    "cypress/no-unnecessary-waiting": "off",
+    "no-unused-expressions": "off",
+    "no-console": "off",
+    "no-param-reassign": "off"
   }
 }
