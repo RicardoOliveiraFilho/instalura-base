@@ -24,16 +24,13 @@ const BASE_URL = isStagingEnv
 
 const loginService = {
   async login({ username, password }) {
-    return HttpClient(
-      `${BASE_URL}/api/login`,
-      {
-        method: 'POST',
-        body: {
-          username,
-          password,
-        },
+    return HttpClient(`${BASE_URL}/api/login`, {
+      method: 'POST',
+      body: {
+        username,
+        password,
       },
-    ).then(respostaConvertida => {
+    }).then(respostaConvertida => {
       const { token } = respostaConvertida.data;
       const DAY_IN_SECONDS = 86400;
 
