@@ -5,9 +5,7 @@ import { render } from '@testing-library/react';
 import WebsiteGlobalProvider from '../../components/wrappers/WebsitePage/provider';
 
 const AllTheProviders = ({ children, ...props }) => (
-  <WebsiteGlobalProvider {...props}>
-    {children}
-  </WebsiteGlobalProvider>
+  <WebsiteGlobalProvider {...props}>{children}</WebsiteGlobalProvider>
 );
 
 AllTheProviders.propTypes = {
@@ -15,7 +13,9 @@ AllTheProviders.propTypes = {
 };
 
 const customRender = (ui, options = {}) => {
-  const Provider = (props) => <AllTheProviders {...props} {...options.providerProps} />;
+  const Provider = props => (
+    <AllTheProviders {...props} {...options.providerProps} />
+  );
 
   return render(ui, { wrapper: Provider, ...options });
 };

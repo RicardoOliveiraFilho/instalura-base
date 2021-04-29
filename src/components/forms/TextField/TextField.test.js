@@ -11,8 +11,7 @@ describe('<TextField />', () => {
         value="Ricardo"
         onChange={() => {}}
         name="nome"
-      />
-      ,
+      />,
     );
 
     const textField = screen.getByPlaceholderText(/nome/i);

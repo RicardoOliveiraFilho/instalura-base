@@ -1,23 +1,23 @@
-module.exports ={
+module.exports = {
   env: {
     browser: true,
     es2021: true,
     'cypress/globals': true,
-    'jest/globals': true
+    'jest/globals': true,
   },
   extends: [
     'plugin:cypress/recommended',
     'plugin:react/recommended',
     'airbnb',
     'plugin:prettier/recommended',
-    'eslint:recommended'
+    'eslint:recommended',
   ],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: ['react', 'react-hooks', 'prettier'],
   rules: {
@@ -26,8 +26,8 @@ module.exports ={
     'react/jsx-filename-extension': [
       1,
       {
-        'extensions': ['.js']
-      }
+        extensions: ['.js'],
+      },
     ],
     'no-use-before-define': 'off',
     'prettier/prettier': 'error',
@@ -41,19 +41,18 @@ module.exports ={
     'cypress/no-unnecessary-waiting': 'off',
     'no-unused-expressions': 'off',
     'no-console': 'off',
-    'no-param-reassign': 'off'
+    'no-param-reassign': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
   overrides: [
     {
-      files: [
-        '**/*.test.js'
-      ],
+      files: ['**/*.test.js'],
       plugins: ['jest'],
       env: {
-        jest: true
+        jest: true,
       },
       // eslint-disable-next-line global-require, import/no-extraneous-dependencies
-      ...require('eslint-plugin-jest').configs.recommended
-    }
-  ]
-}
+      ...require('eslint-plugin-jest').configs.recommended,
+    },
+  ],
+};
