@@ -1,5 +1,5 @@
 import WebsitePageHOC from '../../src/components/wrappers/WebsitePage/hoc';
-import LoginScreen from '../../src/components/screens/LoginScreen';
+import LoginScreen from '../../src/components/screens/app/LoginScreen';
 
 export default WebsitePageHOC(LoginScreen, {
   pageWrapperProps: {

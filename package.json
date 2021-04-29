@@ -11,7 +11,8 @@
     "custom-script": "node ./script-test.js",
     "commit": "cz",
     "prepare": "husky install",
-    "test:integration:open": "cypress open"
+    "test:integration:open": "cypress open",
+    "test:integration": "cypress run --headless"
   },
   "dependencies": {
     "@crello/react-lottie": "^0.0.11",

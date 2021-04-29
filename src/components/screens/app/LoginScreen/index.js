@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 
-import Link from '../../commons/Link';
-import Box from '../../foundation/layout/Box';
-import Grid from '../../foundation/layout/Grid';
-import Text from '../../foundation/Text';
-import Logo from '../../../theme/Logo';
-import { WebsitePageContext } from '../../wrappers/WebsitePage';
-import LoginForm from '../../patterns/FormLogin';
+import Link from '../../../commons/Link';
+import Box from '../../../foundation/layout/Box';
+import Grid from '../../../foundation/layout/Grid';
+import Text from '../../../foundation/Text';
+import Logo from '../../../../theme/Logo';
+import { WebsitePageContext } from '../../../wrappers/WebsitePage';
+import LoginForm from '../../../patterns/FormLogin';
 
 export default function LoginScreen() {
   const websitePageContext = useContext(WebsitePageContext);
