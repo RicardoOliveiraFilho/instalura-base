@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Box from '../../foundation/layout/Box';
 import Grid from '../../foundation/layout/Grid';
 import Text from '../../foundation/Text';
 
-export default function AboutScreen() {
+export default function AboutScreen({ messages }) {
   return (
     <Box display="flex" flexDirection="column" flex={1}>
       <Grid.Container>
@@ -14,13 +15,26 @@ export default function AboutScreen() {
             flex={1}
           >
             <Text variant="title" tag="h2" color="tertiary.main">
-              Página Sobre
+              {messages.pagesobre.pageTitle}
             </Text>
 
-            <Box>Conteúdo da Página Sobre</Box>
+            <Box
+              dangerouslySetInnerHTML={{
+                __html: messages.pagesobre.pageDescription,
+              }}
+            />
           </Grid.Col>
         </Grid.Row>
       </Grid.Container>
     </Box>
   );
 }
+
+AboutScreen.propTypes = {
+  messages: PropTypes.shape({
+    pagesobre: PropTypes.shape({
+      pageTitle: PropTypes.string.isRequired,
+      pageDescription: PropTypes.string.isRequired,
+    }),
+  }).isRequired,
+};
