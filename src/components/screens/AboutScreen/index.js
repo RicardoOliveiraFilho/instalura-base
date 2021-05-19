@@ -31,5 +31,10 @@ export default function AboutScreen({ messages }) {
 }
 
 AboutScreen.propTypes = {
-  messages: PropTypes.object.isRequired,
+  messages: PropTypes.shape({
+    pagesobre: PropTypes.shape({
+      pageTitle: PropTypes.string.isRequired,
+      pageDescription: PropTypes.string.isRequired,
+    }),
+  }).isRequired,
 };
