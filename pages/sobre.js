@@ -7,7 +7,7 @@ function AboutPage({ messages }) {
   return <AboutScreen messages={messages} />;
 }
 
-const TOKEN = '8c06f5d31704ed49911c013a5054a5';
+const TOKEN = process.env.DATO_CMS_TOKEN;
 
 export async function getStaticProps() {
   const DatoCMSURL = 'https://graphql.datocms.com/';
