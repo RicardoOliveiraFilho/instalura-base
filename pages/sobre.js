@@ -6,8 +6,8 @@ function AboutPage({ messages }) {
   return <AboutScreen messages={messages} />;
 }
 
-export async function getStaticProps() {
-  const messages = await getContent();
+export async function getStaticProps({ preview }) {
+  const messages = await getContent({ preview });
 
   return {
     props: {
