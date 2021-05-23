@@ -8,7 +8,11 @@ export default function WebsitePageHOC(
 ) {
   return props => (
     <WebsiteGlobalProvider>
-      <WebsitePageWrapper {...pageWrapperProps} {...props.pageWrapperProps}>
+      <WebsitePageWrapper
+        {...pageWrapperProps}
+        {...props.pageWrapperProps}
+        messages={props.messages}
+      >
         <PageComponent {...props} />
       </WebsitePageWrapper>
     </WebsiteGlobalProvider>
