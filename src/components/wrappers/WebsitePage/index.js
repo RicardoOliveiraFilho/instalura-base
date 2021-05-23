@@ -1,5 +1,6 @@
-import React, { useState, createContext } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import get from 'lodash/get';
 
 import SEO from '../../commons/SEO';
 import Box from '../../foundation/layout/Box';
@@ -8,15 +9,15 @@ import FormCadastro from '../../patterns/FormCadastro';
 import Menu from '../../commons/Menu';
 import Footer from '../../commons/Footer';
 
-export const WebsitePageContext = createContext({
-  toggleModalCadastro: () => {},
-});
+import { WebsitePageContext } from './context';
 
+export { WebsitePageContext } from './context';
 export default function WebsitePageWrapper({
   children,
   seoProps,
   pageBoxProps,
   menuProps,
+  messages,
 }) {
   const [isModalOpen, setModalState] = useState(false);
 
@@ -25,6 +26,9 @@ export default function WebsitePageWrapper({
       value={{
         toggleModalCadastro: () => {
           setModalState(!isModalOpen);
+        },
+        getCMSContent: cmsKey => {
+          return get(messages, cmsKey);
         },
       }}
     >
@@ -55,6 +59,7 @@ WebsitePageWrapper.defaultProps = {
   menuProps: {
     display: true,
   },
+  messages: {},
 };
 
 WebsitePageWrapper.propTypes = {
@@ -70,4 +75,10 @@ WebsitePageWrapper.propTypes = {
     backgroundPosition: PropTypes.string,
   }),
   children: PropTypes.node.isRequired,
+  messages: PropTypes.shape({
+    pagesobre: PropTypes.shape({
+      pageTitle: PropTypes.string.isRequired,
+      pageDescription: PropTypes.string.isRequired,
+    }),
+  }),
 };

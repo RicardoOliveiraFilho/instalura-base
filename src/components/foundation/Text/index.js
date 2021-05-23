@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
@@ -6,6 +6,7 @@ import get from 'lodash/get';
 import propToStyle from '../../../theme/utils/propToStyle';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
 
+import { WebsitePageContext } from '../../wrappers/WebsitePage/context';
 import Link from '../../commons/Link';
 
 export const TextStyleVariantsMap = {
@@ -51,18 +52,30 @@ const TextBase = styled.span`
   ${propToStyle('textAlign')};
 `;
 
-export default function Text({ tag, variant, children, href, ...props }) {
+export default function Text({
+  tag,
+  variant,
+  children,
+  href,
+  cmsKey,
+  ...props
+}) {
+  const webSitePageContext = useContext(WebsitePageContext);
+  const componentContent = cmsKey
+    ? webSitePageContext.getCMSContent(cmsKey)
+    : children;
+
   if (href) {
     return (
       <TextBase as={Link} href={href} variant={variant} {...props}>
-        {children}
+        {componentContent}
       </TextBase>
     );
   }
 
   return (
     <TextBase as={tag} variant={variant} {...props}>
-      {children}
+      {componentContent}
     </TextBase>
   );
 }
@@ -72,6 +85,7 @@ Text.propTypes = {
   variant: PropTypes.string,
   children: PropTypes.node,
   href: PropTypes.string,
+  cmsKey: PropTypes.string,
 };
 
 Text.defaultProps = {
@@ -79,4 +93,5 @@ Text.defaultProps = {
   variant: 'paragraph1',
   children: null,
   href: '',
+  cmsKey: undefined,
 };
