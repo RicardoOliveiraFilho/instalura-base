@@ -72,7 +72,10 @@ describe('loginService', () => {
 
         await loginService.logout(destroyCookie);
 
-        expect(destroyCookie).toHaveBeenCalledWith(null, LOGIN_COOKIE_APP_TOKEN);
+        expect(destroyCookie).toHaveBeenCalledWith(
+          null,
+          LOGIN_COOKIE_APP_TOKEN
+        );
       });
     });
   });
