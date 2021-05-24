@@ -74,7 +74,7 @@ describe('loginService', () => {
 
         expect(destroyCookie).toHaveBeenCalledWith(
           null,
-          LOGIN_COOKIE_APP_TOKEN
+          LOGIN_COOKIE_APP_TOKEN,
         );
       });
     });
