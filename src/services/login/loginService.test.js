@@ -75,6 +75,7 @@ describe('loginService', () => {
         expect(destroyCookie).toHaveBeenCalledWith(
           null,
           LOGIN_COOKIE_APP_TOKEN,
+          { path: '/' },
         );
       });
     });
