@@ -40,8 +40,8 @@ const loginService = {
       };
     });
   },
-  async logout(destroyCookieModule = destroyCookie) {
-    destroyCookieModule(null, LOGIN_COOKIE_APP_TOKEN);
+  async logout(contexto, destroyCookieModule = destroyCookie) {
+    destroyCookieModule(contexto, LOGIN_COOKIE_APP_TOKEN, { path: '/' });
   },
 };
 
