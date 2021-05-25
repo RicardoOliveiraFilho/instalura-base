@@ -21,7 +21,7 @@ module.exports = {
   },
   plugins: ['react', 'react-hooks', 'prettier'],
   rules: {
-    'react-hooks/rules-of-hooks': 'error',
+    // 'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'off',
     'react/jsx-filename-extension': [
       1,
@@ -44,6 +44,7 @@ module.exports = {
     'no-param-reassign': 'off',
     'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
+    'react-hooks/rules-of-hooks': 'off',
   },
   overrides: [
     {
