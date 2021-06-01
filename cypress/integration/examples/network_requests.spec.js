@@ -70,7 +70,7 @@ context('Network Requests', () => {
           userId: user.id,
           title: 'Cypress Test Runner',
           body:
-          'Fast, easy and reliable testing for anything that runs in a browser.',
+            'Fast, easy and reliable testing for anything that runs in a browser.',
         });
       })
       // note that the value here is the returned value of the 2nd request
@@ -111,7 +111,7 @@ context('Network Requests', () => {
           userId: this.user.id,
           title: 'Cypress Test Runner',
           body:
-          'Fast, easy and reliable testing for anything that runs in a browser.',
+            'Fast, easy and reliable testing for anything that runs in a browser.',
         })
           .its('body')
           .as('post'); // save the new post from the response
