@@ -4,7 +4,7 @@ import HomeScreen from '../src/components/screens/HomeScreen';
 export default WebsitePageHOC(HomeScreen, {
   pageWrapperProps: {
     seoProps: {
-      headTitle: 'Home',
+      headTitle: 'Home ',
     },
     pageBoxProps: {
       backgroundImage: 'url(/images/bubblesLight.svg)',
